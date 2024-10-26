@@ -1,0 +1,28 @@
+@import "./../../styles/partials/global";
+
+.header {
+  @include flex-direction(column);
+  padding: 1rem;
+  width: 100%;
+  background-color: $color-light;
+  @include desktop {
+    @include wrap($max-width, $margin-center);
+  }
+  &__wrapper {
+    @include full-width($color-light);
+    box-shadow: $box-shadow;
+  }
+  &__container {
+    @include flex-default(center, space-between);
+  }
+  &__logo {
+    color: $color-dark;
+    @include flex(row, center, space-around);
+  }
+  &__menu {
+    color: $color-secondary;
+  }
+  &__img {
+    margin-right: 0.3rem;
+  }
+}

@@ -1,0 +1,107 @@
+@use "./variables" as *;
+
+// borders
+@mixin border-position($direction, $width, $style, $color) {
+  border-#{$direction}: $width $style $color;
+}
+
+@mixin border-all($width, $style, $color) {
+  border: $width $style $color;
+}
+
+// button default
+@mixin button($background-color, $color, $hover, $width) {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  width: $width;
+  background-color: $background-color;
+  color: $color;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+@mixin status($iconName, $color) {
+  width: 5.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $color;
+  &:before {
+    content: url("./../../../assets/icons/#{$iconName}.svg");
+    float: left;
+  }
+}
+
+// form validation
+@mixin required {
+  @include border-position(bottom, 0.0625rem, solid, $color-validation);
+}
+
+// inputs
+@mixin input($height) {
+  color: black;
+  width: 100%;
+  height: $height;
+  margin: 0.3rem 0 0.9rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  @include states;
+  &::placeholder {
+    color: $color-secondary;
+    font-size: 1rem;
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+}
+
+// flexbox
+@mixin flex($flex-direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-default($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-direction($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+// larger displays
+@mixin wrap($max-width, $margin) {
+  max-width: $max-width;
+  margin: $margin;
+}
+
+@mixin full-width($color) {
+  width: 100%;
+  background: $color;
+}
+
+// responsive design
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}

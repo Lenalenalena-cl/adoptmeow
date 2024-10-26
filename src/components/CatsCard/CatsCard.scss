@@ -1,0 +1,44 @@
+@import "./../../styles/partials/global";
+
+.catsCard {
+  @include flex-default(center, center);
+  @include desktop {
+    justify-content: flex-start;
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    height: 22rem;
+    padding: 0 0.7rem;
+  }
+  &__link {
+    margin: 0;
+  }
+
+  &__img {
+    border-radius: 0.5rem;
+    height: 20rem;
+    min-width: 17rem;
+    max-width: 17rem;
+    box-shadow: $box-shadow;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      filter: opacity(0.5);
+      transition: all ease-in-out 0.2s;
+    }
+  }
+  &__name {
+    float: left;
+    position: relative;
+    bottom: 2.5rem;
+    left: 1rem;
+    color: $color-light;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px $color-secondary;
+    cursor: pointer;
+  }
+}

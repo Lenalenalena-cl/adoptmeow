@@ -1,0 +1,11 @@
+@import "./../../styles/partials/global";
+
+.favoritesCats {
+  @include flex-default(center, center);
+  flex-wrap: wrap;
+
+  @include desktop {
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+}

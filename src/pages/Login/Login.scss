@@ -1,0 +1,21 @@
+@import "./../../styles/partials/global";
+
+.test.required {
+  @include required;
+}
+
+.login {
+  &__wrapper {
+    box-shadow: $box-shadow;
+    border-radius: 0.3rem;
+    margin: 1rem;
+
+    @include tablet {
+      @include wrap($max-width, $margin-center);
+      margin-top: 2rem;
+      width: 35rem;
+      box-shadow: $box-shadow;
+      border-radius: 0.3rem;
+    }
+  }
+}

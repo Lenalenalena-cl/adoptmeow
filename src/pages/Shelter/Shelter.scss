@@ -1,0 +1,48 @@
+@import "./../../styles/partials/global";
+
+.shelter {
+  @include desktop {
+    @include wrap($max-width, $margin-center);
+  }
+  &__cats {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    @include tablet {
+      justify-content: flex-start;
+      margin-left: 1rem;
+    }
+  }
+
+  &__container {
+    @include flex-direction(column);
+    margin: 1rem;
+    color: $color-secondary;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__content {
+    @include flex(row, center, flex-start);
+    @include tablet {
+      margin-left: 0.6rem;
+    }
+  }
+  &__email {
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 1.4rem;
+    margin-right: 0.5rem;
+  }
+  &__back {
+    margin: 1rem 0 0.2rem 0.6rem;
+    cursor: pointer;
+    @include tablet {
+      margin-left: 1.3rem;
+    }
+    &:hover {
+      color: $color-secondary-dark;
+    }
+  }
+}

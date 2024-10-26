@@ -1,0 +1,51 @@
+@import "./../../styles/partials/global";
+
+.request {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include desktop {
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+
+  &__container {
+    margin: 1rem 0.5rem;
+    background-color: $color-light-dark;
+    min-width: 17rem;
+    max-width: 17rem;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.5rem 1rem 0.5rem;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__status.received {
+    @include status(check, $color-check);
+  }
+  &__status.inReview {
+    @include status(progress, $color-progress);
+  }
+  &__status.approved {
+    @include status(paw, $color-paw);
+  }
+  &__status.declined {
+    @include status(declined, $color-declined);
+  }
+  &__cancel {
+    color: $color-secondary;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

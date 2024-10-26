@@ -1,0 +1,89 @@
+@import "./../../styles/partials/global";
+
+.alert {
+  font-size: 1.5rem;
+
+  &__name {
+    color: $color-secondary;
+  }
+  &__icon {
+    width: 3rem;
+    @include flex(row, center, space-around);
+    p {
+      padding-top: 0.2rem;
+    }
+  }
+  &__img {
+    border-radius: 0.5rem;
+  }
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.catDetails {
+  @include desktop {
+    @include wrap($max-width, $margin-center);
+    width: 50rem;
+  }
+  &__container {
+    @include flex(column, flex-start, center);
+    margin: 1rem;
+  }
+  &__info,
+  &__buttons {
+    @include flex(row, center, space-between);
+    width: 100%;
+  }
+  &__shelter {
+    width: 100%;
+    padding: 1rem 0;
+    color: $color-secondary;
+    font-weight: bold;
+    font-size: 1rem;
+    @include border-position(bottom, solid, 0.0625rem, $color-secondary);
+    &-link {
+      cursor: pointer;
+      &:hover {
+        color: $color-secondary-dark;
+      }
+    }
+    &-icon {
+      padding-left: 0.5rem;
+    }
+  }
+  &__info {
+    color: $color-secondary;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    @include border-position(bottom, solid, 0.0625rem, $color-secondary);
+  }
+  &__description {
+    padding: 1rem 0;
+  }
+  &__adopt {
+    @include button($color-secondary, $color-light, $color-primary, 10rem);
+  }
+
+  &__requested {
+    cursor: none;
+    @include button($color-tertiary, $color-light, $color-tertiary, 10rem);
+  }
+  &__like {
+    cursor: pointer;
+    color: $color-tertiary-dark;
+  }
+
+  &__liked {
+    color: $color-validation;
+    cursor: pointer;
+  }
+  &__back {
+    margin: 1rem 0 0.2rem 0.6rem;
+    cursor: pointer;
+    &:hover {
+      color: $color-secondary-dark;
+    }
+  }
+}
