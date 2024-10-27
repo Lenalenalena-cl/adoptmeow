@@ -2,7 +2,6 @@ import "./Cats.scss";
 import { Component } from "react";
 import { fetchCats } from "../../helpers/serverHelper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUp } from "@fortawesome/free-solid-svg-icons";
 import CatsCard from "../../components/CatsCard/CatsCard";
 import Search from "../../components/Search/Search";
 import NotFound from "../../components/NotFound/NotFound";
@@ -153,18 +152,6 @@ class Cats extends Component {
               />
             );
           })}
-        </div>
-        <div className="scrollTop">
-          <FontAwesomeIcon
-            icon={faCircleUp}
-            size="2xl"
-            className="scrollTop__icon"
-            onClick={this.scrollTop}
-            style={{
-              height: 70,
-              display: this.state.showScroll ? "flex" : "none",
-            }}
-          />
         </div>
       </div>
     );

@@ -87,34 +87,19 @@ class DropdownFilter extends Component {
                 Select a City
               </option>
               <option value="airdrie" name="airdrie">
-                Airdrie
+                Toronto
               </option>
               <option value="calgary" name="calgary">
-                Calgary
+                North York
               </option>
               <option value="edmonton" name="edmonton">
-                Edmonton
+              Mississauga
               </option>
               <option value="Grande Prairie" name="Grande Prairie">
-                Grande Prairie
+              Scarborough
               </option>
               <option value="Red Deer" name="Red Deer">
-                Red Deer
-              </option>
-              <option value="leduc" name="leduc">
-                Leduc
-              </option>
-              <option value="lethbridge" name="lethbridge">
-                Lethbridge
-              </option>
-              <option value="Medicine Hat" name="Medicine Hat">
-                Medicine Hat
-              </option>
-              <option value="Saint Albert" name="Saint Albert">
-                Saint Albert
-              </option>
-              <option value="Spruce Grove" name="Spruce Grove">
-                Spruce Grove
+              Etobicoke
               </option>
             </select>
           </div>

@@ -1,5 +1,4 @@
 import "./Header.scss";
-import catIcon from "../../assets/icons/cat.png";
 import { Link } from "react-router-dom";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 
@@ -9,14 +8,7 @@ function Header() {
       <div className="header">
         <div className="header__container">
           <Link to="/" className="header__logo">
-            <img
-              src={catIcon}
-              alt=""
-              width="30"
-              height="30"
-              className="header__img"
-            />
-            <p>meowdopt</p>
+            <p>ADOPTMEOW</p>
           </Link>
           <div>
             <DropDownMenu />

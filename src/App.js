@@ -9,7 +9,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import FavoritesCats from "./pages/FavoritesCats/FavoritesCats";
 import RequestsCats from "./pages/RequestsCats/RequestsCats";
-import Footer from "./components/Footer/Footer";
+
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/:id/favorites" component={FavoritesCats} />
           <Route path="/:id/requests" component={RequestsCats} />
         </Switch>
-        <Footer />
+
       </div>
     </div>
   );

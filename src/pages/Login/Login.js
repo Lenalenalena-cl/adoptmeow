@@ -32,8 +32,8 @@ class Login extends Component {
 
   render() {
     const tabStyle = {
-      _selected: { color: "#dea48f", bg: "#fff2ed" },
-      color: "#dea48f",
+      _selected: { color: "#a78544", bg: "#fff2ed" },
+      color: "#a78544",
       _focus: { outlineColor: "#fff2ed" },
       borderBottomColor: "#fff2ed",
     };
